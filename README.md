@@ -7,8 +7,8 @@ Ruby gem which validates email addresses are not from a throwaway address provid
 usage
 =====
 
-  validates :email, :throwaway => false
-  validates :email, :throwaway => true, :message => "emails from disposable providers are not allowed at Woof.com. Sorry."
+	validates :email, :throwaway => false
+	validates :email, :throwaway => true, :message => "emails from disposable providers are not allowed at Woof.com. Sorry."
 
  If, for some bizarre reason, you want to validate that address *are* from a throwaway provider, you can do that too.
-  validates :email, :throwaway => true
+	validates :email, :throwaway => true
