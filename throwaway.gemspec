@@ -14,8 +14,6 @@ Gem::Specification.new do |s|
   s.add_dependency('activemodel')
   s.add_dependency('mocha')
   
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
+  s.test_files = Dir["spec/**/*"]
 end
