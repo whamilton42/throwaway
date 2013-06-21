@@ -9,14 +9,14 @@ The list of providers is simply hardcoded - I'm unaware of any external service 
 
 ### Query
 
-Throwaway.is_throwaway?(email)
-=> true/false
+	Throwaway.is_throwaway?(email)
+	=> true/false
 
 ### Validator
 
 	validates :email, :throwaway => false
 
-Default message: "*is from a disposable email provider*"
+Default message: *is from a disposable email provider*
 
 	validates :email, :throwaway => false, :message => "emails from disposable providers are not allowed here. Sorry."
 
