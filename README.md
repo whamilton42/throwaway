@@ -7,6 +7,13 @@ The list of providers is simply hardcoded - I'm unaware of any external service 
 
 ## Usage
 
+### Query
+
+Throwaway.is_throwaway?(email)
+=> true/false
+
+### Validator
+
 	validates :email, :throwaway => false
 	validates :email, :throwaway => true, :message => "emails from disposable providers are not allowed at Woof.com. Sorry."
 
