@@ -13,4 +13,4 @@ require 'active_model'
 
 $:.push File.expand_path("../../lib", __FILE__)
 require 'throwaway'
-require 'lib/throwaway_validator'
+require 'mocha/api'

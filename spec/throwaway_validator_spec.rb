@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'mocha'
 
 class ExampleValidatingIsNotThrowaway
   include ActiveModel::Validations
@@ -19,7 +18,7 @@ describe ThrowawayValidator do
 
     it "should mark record with a throwaway email as invalid." do
       email = "woof@bark.com"
-      Throwaway::IsThrowaway.expects(:is_throwaway?).with(email).at_least_once.returns(true)
+      Throwaway.expects(:is_throwaway?).with(email).at_least_once.returns(true)
 
       record.email = email
       
@@ -29,7 +28,7 @@ describe ThrowawayValidator do
     
     it "should not mark a record with a non-throwaway method as invalid." do
       email = "woof@bark.com"
-      Throwaway::IsThrowaway.expects(:is_throwaway?).with(email).at_least_once.returns(false)
+      Throwaway.expects(:is_throwaway?).with(email).at_least_once.returns(false)
 
       record.email = email
       
@@ -43,7 +42,7 @@ describe ThrowawayValidator do
 
     it "should mark record with a throwaway email as valid." do
       email = "woof@bark.com"
-      Throwaway::IsThrowaway.expects(:is_throwaway?).with(email).at_least_once.returns(true)
+      Throwaway.expects(:is_throwaway?).with(email).at_least_once.returns(true)
 
       record.email = email
       
@@ -53,7 +52,7 @@ describe ThrowawayValidator do
     
     it "should mark a record with a non-throwaway method as invalid." do
       email = "woof@bark.com"
-      Throwaway::IsThrowaway.expects(:is_throwaway?).with(email).at_least_once.returns(false)
+      Throwaway.expects(:is_throwaway?).with(email).at_least_once.returns(false)
 
       record.email = email
       
