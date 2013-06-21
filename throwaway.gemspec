@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.summary     = "Anti-disposable-email validator"
   s.description = "Validates email addresses are not from a throwaway account provider."
 
-  s.add_dependency('rspec')
-  s.add_dependency('activemodel')
-  s.add_dependency('mocha')
+  s.add_dependency('activemodel', '>= 3.0.0')
+  s.add_development_dependency('rspec')
+  s.add_development_dependency('mocha')
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
