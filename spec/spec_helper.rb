@@ -1,5 +1,5 @@
 begin
-  require 'simplecov'; 
+  require 'simplecov';
   SimpleCov.start do
     add_group "Lib", 'lib'
   end

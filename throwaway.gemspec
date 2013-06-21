@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.add_dependency('rspec')
   s.add_dependency('activemodel')
   s.add_dependency('mocha')
-  
+
   s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 end
