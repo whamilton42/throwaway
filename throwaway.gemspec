@@ -7,8 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Throwaway::VERSION
   s.authors     = ["William Hamilton"]
   s.email       = ["whamilton42@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{Validates email addresses are not from a throwaway account provider.}
+  s.homepage    = "https://github.com/whamilton42/throwaway"
+  s.summary     = "Anti-disposable-email validator"
+  s.description = "Validates email addresses are not from a throwaway account provider."
 
   s.add_dependency('rspec')
   s.add_dependency('activemodel')
