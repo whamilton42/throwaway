@@ -1,8 +1,6 @@
 curdir = File.dirname(__FILE__)
 Dir["#{curdir}/throwaway/**/*.rb"].each { |f| require f }
 
-require 'yaml'
-
 module Throwaway
   class << self
     def root
@@ -10,8 +8,7 @@ module Throwaway
     end
 
     def is_throwaway?(email)
-      providers = YAML.load_file("#{Throwaway.root}/lib/providers.yml")['providers']
-      providers.include?(email.split("@").last)
+      Throwaway::Providers.list.has_key?(email.split("@").last)
     end
   end
 end
